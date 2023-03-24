@@ -1,0 +1,184 @@
+body,
+p {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    font-style: normal;
+    color: black;
+    text-align: justify;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 30px auto 30px;
+    grid-template-areas:
+        "cabecalho cabecalho"
+        "conteudo conteudo"
+        "rodape rodape";
+}
+
+.header {
+    grid-area: cabecalho;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu1,
+.menu2,
+.menu3 {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu1 {
+    background-color: #E0D475;
+
+}
+
+.menu2 {
+    background-color: rgb(238, 130, 130);
+    width: 20%;
+}
+
+.menu3 {
+    background-color: rgb(6, 233, 245);
+}
+
+.content {
+
+    grid-area: conteudo;
+    background-color: #e0ddde;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagemCyber{
+    padding-top: 2%;
+    width: 50%;
+}
+
+.texto {
+    padding-top: 2%;
+    width: 95%;
+    font-size: 0.85em;
+}
+
+.footer {
+    grid-area: rodape;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E0D475;
+}
+
+.parte1,
+.parte2,
+.parte3 {
+    width: 25%;
+    text-align: center;
+    color: #fff;
+}
+
+.parte1 {
+    background-color: rgb(12, 0, 249);
+}
+
+.parte2 {
+    width: 50%;
+    margin: 0px 2px;
+    background-color: rgb(74, 149, 4);
+}
+
+.parte3 {
+    margin: 0;
+    background-color: purple;
+}
+
+/* telas médias 701-900px */
+@media(max-width: 900px) {
+    .main {
+        width: 100%;
+        font-size: 0.9em;
+        grid-template-rows: 60px auto 30px;
+        grid-template-columns: 100%;
+        grid-template-areas: "cabecalho" "conteudo" "rodape";
+
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu1,
+    .menu2,
+    .menu3 {
+        margin: 0;
+        border: solid 1px #fff;
+        width: 49.7%;
+
+
+    }
+
+    .menu1 {
+        width: 100%;
+        order: -1;
+    }
+
+    .texto {
+        font-size: 0.75em;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .parte1,
+    .parte2,
+    .parte3 {
+        margin: 0;
+        border: solid 1px #fff;
+        width: 49.7%;
+    }
+
+    .parte1 {
+        width: 100%;
+        order: -1;
+    }
+}
+
+/* tela pequena celular até 700px*/
+@media(max-width: 700px) {
+    body {
+        margin: 0 5px;
+
+    }
+
+    .main {
+
+        grid-template-rows: 100px auto 30px;
+        grid-template-areas: "cabecalho" "conteudo" "rodape";
+    }
+
+    .texto {
+        font-size: 0.7em;
+    }
+    .imagemCyber{
+        width: 50%;
+    }
+
+    .main,
+    .parte1,
+    .parte2,
+    .parte3,
+    .menu1,
+    .menu2,
+    .menu3 {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+}
